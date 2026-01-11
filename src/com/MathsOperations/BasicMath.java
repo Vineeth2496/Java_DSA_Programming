@@ -93,7 +93,15 @@ public class BasicMath {
         return true;
         
     }
-	
+	public static int gcd(int a,int b)
+	{
+		while( a> 0 && b> 0){
+			if(a>b) a = a%b;
+			else b= b%a;
+		}
+		if(a==0) return b;
+		return a;
+	}		
 	public static void main(String[] args) {
 //		System.out.println("Count of Digits: "+ print1(7789));
 //		print2();
@@ -105,6 +113,8 @@ public class BasicMath {
 //        int n = sc.nextInt();
 //        System.out.println(isPrime(n));
 //        sc.close();
+		
+		System.out.println(gcd(5,15));
 	}
 
 	
